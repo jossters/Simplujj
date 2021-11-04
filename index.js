@@ -9,9 +9,7 @@ const PORT = process.env.PORT || 9000
 
 server.use(express.json())
 server.use(cors())
-server.use(express.static(path.join(__dirname, 'clint/build'))) // static assets
-
-
+server.use(express.static(path.join(__dirname, 'client/build'))) // static assets
 
 server.get('/', (req, res) => {
     // sending back index.html
