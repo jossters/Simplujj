@@ -11,15 +11,15 @@ server.use(express.json())
 server.use(cors())
 server.use(express.static(path.join(__dirname, 'clint/build'))) // static assets
 
-server.use('/', (req, res) => {
-    // sending back index.html
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
-})
-
 server.get('/api/hello', (req, res) => {
     res.json({ message: 'api is working'})
 })
 
+server.use('/', (req, res) => {
+    res.send(`<h1>Johnny</h1>`)
+    // sending back index.html
+    // res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+})
 server.use((err, req, res, next) => { // eslint-disable-line
     res.status(500).json({
         message: err.message,
