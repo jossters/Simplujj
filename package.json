@@ -4,18 +4,27 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "heroku-postbuild": "cd client && yarn && yarn build"
+    "heroku-postbuild": "cd client && yarn && yarn build",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "reset": "npm run rollback && npm run migrate && npm run seed",
+    "seed": "knex seed:run",
+    "cleanup": "knex seed:run --specific=01-cleanup.js"
   },
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^7.11.0",
-    "nodemon": "^2.0.14"
-  },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.13",
+    "knex-cleaner": "^1.3.1",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "nodemon": "^2.0.14"
   }
 }

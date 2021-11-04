@@ -15,9 +15,11 @@ server.get('/', (req, res) => {
     // sending back index.html
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
+
 server.get('/api', (req, res) => {
     res.json({ message: 'api is working'})
 })
+
 server.use((err, req, res, next) => { // eslint-disable-line
     res.status(500).json({
         message: err.message,
