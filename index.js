@@ -16,9 +16,8 @@ server.get('/api/hello', (req, res) => {
 })
 
 server.use('/', (req, res) => {
-    res.send(`<h1>Johnny</h1>`)
     // sending back index.html
-    // res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 server.use((err, req, res, next) => { // eslint-disable-line
     res.status(500).json({
