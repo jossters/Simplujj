@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #000000;
+  background-color: #0a0908;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ p {
   font-size: 40px;
   letter-spacing: 2.4px;
   word-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
@@ -48,4 +48,9 @@ p {
   100% {
     transform: scale(1);
   }
+}
+
+.navsvg {
+  max-width:5%;
+    height:auto;
 }

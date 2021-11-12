@@ -7,9 +7,7 @@ const Home = () => {
         <div className="App">
       <header className="App-header">
         <img src={burger} className="App-logo" alt="logo" />
-        <p>
-          
-        </p>
+        <span></span>
         <p>
           Simplujj Burgers
         </p>
