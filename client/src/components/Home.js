@@ -2,7 +2,7 @@ import React from "react";
 import burger from "../burger.png";
 import "../App.css";
 
-const Home = () => {
+export default function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -14,4 +14,3 @@ const Home = () => {
   );
 };
 
-export default Home;

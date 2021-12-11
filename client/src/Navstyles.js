@@ -5,13 +5,14 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #f2f4f3;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   text-align: center;
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  z-index: 9;
 
   @media (max-width: 576px) {
       width: 100%;
@@ -35,6 +36,7 @@ export const StyledMenu = styled.nav`
     &:hover {
       color: #a9927d;
     }
+
   }
 `
 
@@ -46,7 +48,7 @@ export const StyledBurger = styled.button`
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
-  height: 2rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -58,25 +60,25 @@ export const StyledBurger = styled.button`
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
-    background: ${({ open }) => open ? '#0D0C1D' : '#EFFFFA'};
+    width: 3rem;
+    height: 0.5rem;
+    background: ${({ isOpen }) => isOpen ? '#0D0C1D' : '#EFFFFA'};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ isOpen }) => isOpen ? 'rotate(45deg)' : 'rotate(0)'};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ isOpen }) => isOpen ? '0' : '1'};
+      transform: ${({ isOpen }) => isOpen ? 'translateX(50px)' : 'translateX(0)'};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `
