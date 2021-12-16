@@ -13,7 +13,6 @@ export default function App() {
   return (
     <Router>
       <NavMenu />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Location" element={<Location />} />
