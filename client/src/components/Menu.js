@@ -4,9 +4,9 @@ import "../App.css";
 import { burgers, drinks, sides, tabs } from "../data";
 
 const Tab = styled.button`
-  height: 40px;
-  width: 100px;
-  padding: 10px 30px;
+  font-size: 4vmin;
+  height: 7vmin;
+  width: 20vmin;
   cursor: pointer;
   opacity: 0.6;
   background: white;
@@ -28,9 +28,9 @@ export default function Menu() {
   const burgerMenu = burgers.map((data, key) => {
     return (
       <div className="Menu-items" key={key}>
-       <div>{ data.image }</div> 
-       <div>{data.title}</div>
-       <div>{data.price}</div>
+        <div className="Image-item">{data.image}</div>
+        <div className="Title-item">{data.title}</div>
+        <div className="Price-item">{data.price}</div>
       </div>
     );
   });
@@ -38,9 +38,9 @@ export default function Menu() {
   const drinksMenu = drinks.map((data, key) => {
     return (
       <div className="Menu-items" key={key}>
-       <div>{ data.image }</div> 
-       <div>{data.title}</div>
-       <div>{data.price}</div>
+        <div className="Image-item">{data.image}</div>
+        <div className="Title-item">{data.title}</div>
+        <div className="Price-item">{data.price}</div>
       </div>
     );
   });
@@ -48,9 +48,9 @@ export default function Menu() {
   const sidesMenu = sides.map((data, key) => {
     return (
       <div className="Menu-items" key={key}>
-       <div>{ data.image }</div> 
-       <div>{data.title}</div>
-       <div>{data.price}</div>
+        <div className="Image-item">{data.image}</div>
+        <div className="Title-item">{data.title}</div>
+        <div className="Price-item">{data.price}</div>
       </div>
     );
   });
@@ -66,22 +66,17 @@ export default function Menu() {
 
   return (
     <div className="App-Menu">
-      <div className="Hole-Menu">
-        <h1 className="H1-Menu"> Menu </h1>
-        <div className="hole-tab">
-        <div className="Hole-Menu">
-          
+      <h1 className="H1-Menu"> Menu </h1>
       <div className="Tab-Menu">
         {tabs.map((tab) => (
           <Tab key={tab} active={active === tab} onClick={() => setActive(tab)}>
             {tab}
           </Tab>
         ))}
-        </div>
-        {renderMenu()}
-        </div>
-        </div>
-        </div>
+      </div>
+      <div className="Entire-Items-Menu">
+        <div className="Items-Menu">{renderMenu()}</div>
+      </div>
     </div>
   );
 }
