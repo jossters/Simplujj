@@ -17,7 +17,7 @@ const Tab = styled.button`
   ${({ active }) =>
     active &&
     `
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid red;
     opacity: 1;
   `}
 `;
