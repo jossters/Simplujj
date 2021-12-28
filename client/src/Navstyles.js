@@ -12,7 +12,7 @@ export const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  z-index: 9;
+  z-index: 10;
 
   @media (max-width: 576px) {
       width: 100%;
@@ -43,7 +43,7 @@ export const StyledMenu = styled.nav`
 export const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
-  left: 2rem;
+  left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -53,7 +53,7 @@ export const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 11;
 
   &:focus {
     outline: none;
@@ -61,8 +61,8 @@ export const StyledBurger = styled.button`
 
   div {
     width: 3rem;
-    height: 0.5rem;
-    background: ${({ isOpen }) => isOpen ? '#0D0C1D' : '#EFFFFA'};
+    height: 0.4rem;
+    background: ${({ isOpen }) => isOpen ? '#0D0C1D' : '#877a4f'};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
