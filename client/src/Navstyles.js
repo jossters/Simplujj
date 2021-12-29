@@ -59,7 +59,7 @@ export const StyledBurger = styled.button`
   div {
     width: 3rem;
     height: 0.4rem;
-    background: ${({ isOpen }) => isOpen ? '#0D0C1D' : '#877a4f'};
+    background: ${({ isOpen }) => isOpen ? 'black' : 'red'};
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;
