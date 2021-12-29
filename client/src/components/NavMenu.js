@@ -68,10 +68,8 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div>
         <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
-      </div>
     </div>
   );
 };

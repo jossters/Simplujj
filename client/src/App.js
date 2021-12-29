@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import "./App.css"
 //component
 import NavMenu from "./components/NavMenu";
@@ -12,10 +12,15 @@ import AboutUs from "./components/AboutUs";
 export default function App() {
   return (
     <Router>
-      <div className="Nav-App">
-        <div className="Nav-Title">Simplujj</div>
-      <NavMenu />
+      <nav className="Nav-App-Wraper">
+        <div className="Nav-App">
+        <NavMenu />
+        <NavLink to="/">
+        <div className="Nav-Title" >Simplujj</div>
+        </NavLink>
+      <button>Cart</button>
       </div>
+      </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Location" element={<Location />} />

@@ -5,6 +5,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin: 50px 0px 100px 0px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -99,7 +100,7 @@ p {
 }
 
 .H1-Menu {
-  margin: 100px 0px 100px 0px;
+  margin: 50px 0px 100px 0px;
   font-size: 20vmin;
 }
 
@@ -109,18 +110,34 @@ p {
   flex-direction: row;
 }
 
-.Nav-App {
-  position: fixed;
+.Nav-App-Wraper {
+  position: relative;
   height: 55px;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid  #877a4f;
+  border-bottom: 2px solid  #ff0000;
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
+}
+.Nav-App {
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+  padding: 0 3%;
+  width: 100%;
 }
 .Nav-Title {
   color:black;
-  font-size: 50px;
+  font-size: 45px;
 }
+.Menu-Button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+}
+
