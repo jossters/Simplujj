@@ -1,6 +1,10 @@
-import React from "react";
+import { React, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+
+//Styles
 import "./App.css"
+import { EverythingButtNav } from "./AppStyles";
+
 //component
 import NavMenu from "./components/NavMenu";
 import Home from "./components/Home";
@@ -10,16 +14,18 @@ import FoodDelivery from "./components/FoodDelivery";
 import AboutUs from "./components/AboutUs";
 
 export default function App() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Router>
+      <NavMenu isOpen={isOpen} setIsOpen={setIsOpen}/>
+      <EverythingButtNav isOpen={isOpen} setIsOpen={setIsOpen}>
       <nav className="Nav-App-Wraper">
         <div className="Nav-App">
-        <NavMenu />
         <NavLink to="/">
         <div className="Nav-Title" >Simplujj</div>
         </NavLink>
-      <button>Cart</button>
       </div>
+      {/* <button>Cart</button> */}
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,6 +34,7 @@ export default function App() {
         <Route path="/Food-Delivery" element={<FoodDelivery />} />
         <Route path="/About-Us" element={<AboutUs />} />
       </Routes>
+      </EverythingButtNav>
     </Router>
   );
 }

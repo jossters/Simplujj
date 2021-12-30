@@ -116,12 +116,11 @@ p {
   width: 100%;
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid  #ff0000;
-  
   display: flex;
 }
 .Nav-App {
   display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
   padding: 0 3%;
   width: 100%;
@@ -129,6 +128,7 @@ p {
 .Nav-Title {
   color:black;
   font-size: 45px;
+  margin: 5% 0%;
 }
 .Menu-Button {
   background-color: red;
@@ -140,4 +140,5 @@ p {
   display: inline-block;
   font-size: 2rem;
 }
+
 

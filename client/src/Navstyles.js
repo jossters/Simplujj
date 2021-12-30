@@ -13,6 +13,7 @@ export const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+ 
 
   @media (max-width: 576px) {
       width: 100%;
@@ -41,6 +42,7 @@ export const StyledMenu = styled.nav`
 `
 
 export const StyledBurger = styled.button`
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -51,6 +53,9 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   border: none;
+  top: .65%;
+  left: 2rem;
+
 
   &:focus {
     outline: none;

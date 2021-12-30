@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { NavLink } from "react-router-dom";
 
 //Stlyes imports
@@ -64,8 +64,7 @@ const Burger = ({ isOpen, setIsOpen }) => {
   );
 };
 
-const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Nav = ({ isOpen, setIsOpen }) => {
   return (
     <div>
         <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
