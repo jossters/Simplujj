@@ -67,8 +67,8 @@ const Burger = ({ isOpen, setIsOpen }) => {
 const Nav = ({ isOpen, setIsOpen }) => {
   return (
     <div>
-        <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };

@@ -46,7 +46,7 @@ export const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
+  width: 3rem;
   height: 3rem;
   background: transparent;
   border: 2px solid  #ff0000;
@@ -55,6 +55,7 @@ export const StyledBurger = styled.button`
   border: none;
   top: .65%;
   left: 1rem;
+  z-index: 12;
 
 
   &:focus {
@@ -68,7 +69,7 @@ export const StyledBurger = styled.button`
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;
-    z-index: 16;
+    z-index: 11;
 
     :first-child {
       transform: ${({ isOpen }) => isOpen ? 'rotate(45deg)' : 'rotate(0)'};
