@@ -54,7 +54,7 @@ export const StyledBurger = styled.button`
   padding: 0;
   border: none;
   top: .65%;
-  left: 2rem;
+  left: 1rem;
 
 
   &:focus {
