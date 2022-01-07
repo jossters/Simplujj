@@ -1,6 +1,8 @@
 import React from "react";
-import GoogleMapReact from "google-map-react";
+import GoogleMap from "google-map-react";
 import "../App.css";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function Location() {
   return (
@@ -11,7 +13,7 @@ export default function Location() {
           className="col text-center"
           style={{ width: "85%", height: "70vh" }}
         >
-          <GoogleMapReact
+          <GoogleMap
             bootstrapURLKeys={{ key: "" }}
             defaultZoom={17}
             defaultCenter={{
@@ -19,7 +21,12 @@ export default function Location() {
               lng: -117.922038,
             }}
             >
-            </GoogleMapReact>
+              <AnyReactComponent
+            lat={34.107041}
+            lng={-117.922038}
+            text="🍔"
+          />
+            </GoogleMap>
           
         </div>
       </header>
