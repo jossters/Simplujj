@@ -59,7 +59,6 @@ export default function Location() {
                 component="img"
                 sx={{
                   width: 100,
-                  padding: "16px",
                 }}
                 image={burger}
                 alt="burger"
