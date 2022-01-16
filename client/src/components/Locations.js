@@ -45,7 +45,8 @@ export default function Location() {
             <LocationPin lat={location.lat} lng={location.lng} />
           </GoogleMap>
         </div>
-        <Card variant="outlined" sx={{}}>
+
+        <Card variant="outlined" sx={{margin: 3 }}>
           <CardActionArea sx={{}}>
             <CardContent
               sx={{
