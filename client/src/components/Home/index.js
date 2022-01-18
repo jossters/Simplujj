@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import burger from "../burger.png";
-import "../App.css";
+import burger from "../../resources/png/burger.png";
+import "../../App.css";
 
 export default function Home() {
   return (

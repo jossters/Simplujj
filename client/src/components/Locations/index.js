@@ -1,8 +1,8 @@
 import React from "react";
 import GoogleMap from "google-map-react";
-import "../App.css";
-import pin from "../placeholder.png";
-import burger from "../burger.png";
+import "../../App.css";
+import pin from "../../resources/png/placeholder.png";
+import burger from "../../resources/png/burger.png";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

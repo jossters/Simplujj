@@ -1,8 +1,8 @@
 import React from "react";
-import "../App.css";
-import DoorDash from "../2560px-DoorDash_Logo.svg.png";
-import GrubHub from "../2560px-GrubHub_Logo_2016.svg.png";
-import UberEats from "../2560px-Uber_Eats_2018_logo.svg.png";
+import "../../App.css";
+import DoorDash from "../../resources/png/2560px-DoorDash_Logo.svg.png";
+import GrubHub from "../../resources/png/2560px-GrubHub_Logo_2016.svg.png";
+import UberEats from "../../resources/png/2560px-Uber_Eats_2018_logo.svg.png";
 
 export default function FoodDelivery() {
     const doordashClick = () => {

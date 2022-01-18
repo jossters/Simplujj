@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import "../App.css";
-import { burgers, drinks, sides, tabs } from "../data";
+import "../../App.css";
+import { burgers, drinks, sides, tabs } from "../../resources/data/data";
 
 const Tab = styled.button`
   font-size: 4vmin;

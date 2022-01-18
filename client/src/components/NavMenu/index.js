@@ -2,15 +2,15 @@ import { React } from "react";
 import { NavLink } from "react-router-dom";
 
 //Stlyes imports
-import { StyledMenu, StyledBurger } from "../Navstyles.js";
-import "../App.css";
+import { StyledMenu, StyledBurger } from "./styles";
+import "../../App.css";
 
 //SVG imports
-import Home from "../icons/home.svg";
-import Location from "../icons/location.svg";
-import Food from "../icons/menu.svg";
-import Delivery from "../icons/food-delivery.svg";
-import About from "../icons/about-us.svg";
+import Home from "../../resources/icons/home.svg";
+import Location from "../../resources/icons/location.svg";
+import Food from "../../resources/icons/menu.svg";
+import Delivery from "../../resources/icons/food-delivery.svg";
+import About from "../../resources/icons/about-us.svg";
 
 const Menu = ({ isOpen, setIsOpen }) => {
   return (
