@@ -21,7 +21,7 @@ export default function App() {
       <EverythingButtNav isOpen={isOpen} setIsOpen={setIsOpen}>
       <nav className="Nav-App-Wraper">
         <div className="Nav-App">
-        <NavLink to="/">
+        <NavLink className="Title" to="/">
         <div className="Nav-Title" >Simplujj</div>
         </NavLink>
       </div>

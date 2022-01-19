@@ -1,18 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import burger from "../../resources/png/burger.png";
-import "../../App.css";
+
+//Stlyes imports
+import { MenuButton, ImgLogo } from "./styles";
+import { App } from "../../AppStyles";
 
 export default function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={burger} className="App-logo" alt="logo" />
+    <App>
+        <ImgLogo src={burger}  alt="logo" />
         <NavLink to="/Menu">
-        <button className="Menu-Button">Our Menu</button>
+        <MenuButton className="Menu-Button">Our Menu</MenuButton>
         </NavLink>
-      </header>
-    </div>
+    </App>
   );
 };
 

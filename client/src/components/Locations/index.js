@@ -1,6 +1,9 @@
 import React from "react";
 import GoogleMap from "google-map-react";
+
+import { App } from "../../AppStyles";
 import "../../App.css";
+
 import pin from "../../resources/png/placeholder.png";
 import burger from "../../resources/png/burger.png";
 import Typography from "@mui/material/Typography";
@@ -27,64 +30,75 @@ export default function Location() {
     );
   };
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Location</h1>
-        <div
-          className="col text-center"
-          style={{ width: "90vmin", height: "50vh" }}
+    <App>
+      <h1>Location</h1>
+      <div
+        className="col text-center"
+        style={{ width: "90vmin", height: "50vh" }}
+      >
+        <GoogleMap
+          bootstrapURLKeys={{ key: "" }}
+          defaultZoom={14}
+          defaultCenter={{
+            lat: location.lat,
+            lng: location.lng,
+          }}
         >
-          <GoogleMap
-            bootstrapURLKeys={{ key: "" }}
-            defaultZoom={14}
-            defaultCenter={{
-              lat: location.lat,
-              lng: location.lng,
+          <LocationPin lat={location.lat} lng={location.lng} />
+        </GoogleMap>
+      </div>
+
+      <Card variant="outlined" sx={{ display: "flex", margin: 3 }}>
+        <CardActionArea>
+          <CardContent
+            sx={{
+              display: "flex",
+              flexDirection: "row",
             }}
           >
-            <LocationPin lat={location.lat} lng={location.lng} />
-          </GoogleMap>
-        </div>
-
-        <Card variant="outlined" sx={{margin: 3 }}>
-          <CardActionArea sx={{}}>
-            <CardContent
-              sx={{
-                display: "flex",
-                flexDirection: "row",
+            <CardContent 
+            sx={{
+              display: "flex",
+                flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center",
-              }}
+            }}
             >
               <CardMedia
                 component="img"
                 sx={{
-                  width: 100,
+                  width: 120,
                 }}
                 image={burger}
                 alt="burger"
               />
-              <CardContent>
-                <Typography sx={{ fontSize: 30 }} color="black">
-                  {location.name}
-                </Typography>
-                <Typography sx={{ fontSize: 15 }} color="black">
-                  Azusa,CA
-                </Typography>
-                <Typography sx={{ fontSize: 15 }} color="black">
-                  1-800-000-000
-                </Typography>
-                <Typography sx={{ fontSize: 15 }} color="black">
-                  10:30 a.m. - 1:00 a.m.
-                </Typography>
-              </CardContent>
             </CardContent>
-            <Button className="pointer" onClick={handleClick}>
-              Directions
-            </Button>
-          </CardActionArea>
-        </Card>
-      </header>
-    </div>
+
+            <CardContent
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Typography variant="h5" sx={{ fontSize: 40 }} color="black">
+                {location.name}
+              </Typography>
+              <Typography color="text.secondary" sx={{ fontSize: 15 }}>
+                Azusa,CA
+              </Typography>
+              <Typography color="text.secondary" sx={{ fontSize: 15 }}>
+                1-800-000-000
+              </Typography>
+              <Typography color="text.secondary" sx={{ fontSize: 12 }}>
+                10:30 a.m. - 1:00 a.m.
+              </Typography>
+              <Button className="pointer" onClick={handleClick}>
+                Directions
+              </Button>
+            </CardContent>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </App>
   );
 }
